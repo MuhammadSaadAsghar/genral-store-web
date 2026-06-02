@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbartop = () => {
   return (
-    <div className='py-2 capitalize  text-sm w-full bg-green-800  flex justify-between px-20 items-center text-white '>
+    <div className='py-2 capitalize  text-sm w-full bg-[#1F7A3D]  flex justify-between px-20 items-center text-white '>
         <div className='flex gap-2'>
            <i className="ri-store-2-line"></i>
       <p>ali asghar karyana store</p>
