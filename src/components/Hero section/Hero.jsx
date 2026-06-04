@@ -2,13 +2,13 @@ import React from 'react'
 import Herocontent from './Herocontent'
 import HeroButton from './HeroButton'
 
-const Hero = () => {
+const Hero = ({toggle}) => {
  
 
 
   return (
-    <div className='h-110 w-full bg-[#F4F9F1] relative'>
-      <Herocontent/>
+    <div className={`h-110 w-full ${toggle==="dark"?"navbar-dark":"bg-white text-black"} bg-[#F4F9F1] relative`}>
+      <Herocontent toggle={toggle}/>
       
     </div>
   )

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Navbartop = () => {
+const Navbartop = ({toggle}) => {
   return (
-    <div className='py-2 capitalize  text-sm w-full bg-[#1F7A3D]  flex justify-between px-20 items-center text-white '>
+    <div className={`${toggle==="dark"?"navbar-dark border-b border-gray-500":"bg-[#1F7A3D] text-white"} py-2 capitalize  text-sm w-full   flex justify-between px-20 items-center  `}>
         <div className='flex gap-2'>
            <i className="ri-store-2-line"></i>
       <p>ali asghar karyana store</p>
