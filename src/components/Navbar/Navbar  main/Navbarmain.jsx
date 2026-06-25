@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbarcontent from './Navbarcontent'
 import Searchbar from './Searchbar'
 import Navbaraction from './Navbaraction'
 import Darkandlight from './Darkandlight'
+import { ThemeContext } from '../../../context/Lightdarkmode'
 
-const Navbarmain = ({toggle,togglemode}) => {
+const Navbarmain = () => {
+  const {toggle,togglemode}=useContext(ThemeContext)
   return (
     <div className={`${toggle==="dark"?"navbar-dark border-b border-gray-400":"bg-white text-black border-b border-gray-200"}`}>
     <div className="h-20 w-full px-20 text-sm   flex justify-between items-center gap-4">

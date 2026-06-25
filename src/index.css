@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .navbar-dark{
-   background-color: #021c30;
-   color: #ffffff;
+   background-color: #021c30 !important;
+   color: #ffffff !important;
 }
 

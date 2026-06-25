@@ -5,7 +5,7 @@ import HeroButton from './HeroButton'
 import heroData from "./HeroData";
 
 
-const Herocontent = ({toggle}) => {
+const Herocontent = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -27,7 +27,7 @@ const Herocontent = ({toggle}) => {
   return (
     <div className=' flex h-full w-full  relative  '>
       
-       <Heroleft toggle={toggle} data={currenthero}/>
+       <Heroleft  data={currenthero}/>
        <Heroright data={currenthero}/>
        <HeroButton Nextslide={Nextslide} Prevslide={Prevslide} />
     </div>

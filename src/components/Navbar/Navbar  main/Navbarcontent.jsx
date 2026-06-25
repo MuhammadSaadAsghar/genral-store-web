@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../../assets/logo.png"
+import { ThemeContext } from "../../../context/Lightdarkmode";
 
-const Navbarcontent = ({toggle}) => {
+const Navbarcontent = () => {
+
+  const{toggle,togglemode}=useContext(ThemeContext)
   return (
     <>
     <div className="flex items-center ml-3 gap-4  "> 

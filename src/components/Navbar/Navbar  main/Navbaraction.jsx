@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../../context/Lightdarkmode";
 
-const Navbaraction = ({toggle}) => {
+const Navbaraction = () => {
+
+  const {toggle,togglemode}=useContext(ThemeContext)
+
   return (
     <div className="flex gap-6 items-center ">
       <p className="text-lg">

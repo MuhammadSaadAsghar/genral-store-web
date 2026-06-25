@@ -1,24 +1,35 @@
-import {React,useState} from 'react'
+import { React } from "react";
+import { NavLink } from "react-router-dom";
 
+const Bottomicons = () => {
+ 
 
-const  Bottomicons = () => {
-    const [active, setActive] = useState("HOME")
-
-    const link =["HOME","ABOUT US","SHOP","OFFERS","BLOG","CONTACT US"]
+  const link = [
+    { name: "HOME",path:"/" },
+    { name: "ABOUT US" ,path:"/about"},
+    { name: "SHOP",path:"/shop" },
+    { name: "OFFERS",path:"/Offers" },
+    { name: "BLOG",path:"/blog" },
+    { name: "CONTACT US",path:"/Contact" },
+  ];
   return (
-    <div className=' flex '>
-      <ul className='flex gap-8 text-sm font-semibold items-center '>
-       {link.map((item)=> {
-        return <li key={item} ><a href="#" onClick={()=>setActive(item)}
-
-        className={`cursor-pointer  ${active === item ? "text-lime-700 border-b border-lime-700 pb-1":""}`}
-
-        >{item}</a></li>
-       })}
+    <div className=" flex ">
+      <ul className="flex gap-8 text-sm font-semibold items-center ">
+        {link.map((item) => {
+          return (
+            <li key={item.name}>
+              <NavLink
+                to={item.path}
+                className={ ({isActive})=>{ return isActive ? "text-lime-700 border-b border-lime-700 pb-1" : ""}}
+              >
+                {item.name}
+              </NavLink>
+            </li>
+          );
+        })}
       </ul>
+    </div>
+  );
+};
 
-   </div>
-  )
-}
-
-export default Bottomicons
+export default Bottomicons;

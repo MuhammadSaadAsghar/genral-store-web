@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../../../context/Lightdarkmode'
 
-const Navbartop = ({toggle}) => {
+const Navbartop = () => {
+  const {toggle}=useContext(ThemeContext)
   return (
     <div className={`${toggle==="dark"?"navbar-dark border-b border-gray-500":"bg-[#1F7A3D] text-white"} py-2 capitalize  text-sm w-full   flex justify-between px-20 items-center  `}>
         <div className='flex gap-2'>

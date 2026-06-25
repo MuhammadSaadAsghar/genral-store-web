@@ -1,8 +1,10 @@
-import {React} from 'react'
+import React,{ useContext} from 'react'
+import { ThemeContext } from "../../../context/Lightdarkmode";
 
-const Darkandlight = ({togglemode,toggle}) => {
-
-
+const Darkandlight = () => {
+  
+  const {toggle,togglemode} = useContext(ThemeContext)
+ 
   return (
     <div className='bg-gray-400/50 rounded-full w-9 h-9  flex justify-center items-center '>
         <button onClick={togglemode} >

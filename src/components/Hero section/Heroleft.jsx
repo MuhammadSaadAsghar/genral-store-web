@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../../context/Lightdarkmode'
 
-const Heroleft = ({data,toggle}) => {
+const Heroleft = ({data}) => {
+  const {toggle}=useContext(ThemeContext)
   return (
     <div className='h-full flex flex-col  justify-center text-left pl-16 w-[40%] ' >
         <div className='flex flex-col mb-3 leading-tight'>
@@ -17,7 +19,7 @@ const Heroleft = ({data,toggle}) => {
         <p className={`${toggle==="dark"?"text-gray-200":"text-gray-600"}`}>{data.description}</p>
       </div>
       <div className=''>
-        <button className='uppercase cursor-pointer bg-[#1e971e] rounded-sm py-2 px-5 text-white text-sm'>shop now <i className="ri-arrow-right-s-line text-lg"></i> </button>
+        <button className='uppercase cursor-pointer  bg-[#1e971e] rounded-sm py-2 px-5 text-white text-sm'>shop now <i className="ri-arrow-right-s-line text-lg"></i> </button>
       </div>
     </div>
   )

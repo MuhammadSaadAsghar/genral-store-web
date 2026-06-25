@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Herocontent from './Herocontent'
 import HeroButton from './HeroButton'
+import { ThemeContext } from '../../context/Lightdarkmode'
 
-const Hero = ({toggle}) => {
+const Hero = () => {
+  const {toggle}=useContext(ThemeContext)
  
 
 
